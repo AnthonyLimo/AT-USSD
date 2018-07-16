@@ -11,7 +11,7 @@ def ussd():
     text = request.values.get("text",None)
 
     if text == "":
-        response = "CON What would you like to check?"
+        response = "CON What would you like to check?\n"
         response = "1. My Account\n"
         response = "2. My phone number\n"
     elif text == "1":
