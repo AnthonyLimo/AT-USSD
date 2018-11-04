@@ -6,6 +6,12 @@ This is a simple Flask app that talks to the Africa's Talking servers with USSD 
 Create an Africa's Talking account or sign into your account. Head over to the Sandbox section and get your API key to make sure that your app can be authenticated by the servers.
 
 ### Initializing the app
+While in the project directory,activate python virtual environment by
+
+```
+source ./venv/bin/activate
+```
+
 Download the python file to your project folder. 
 Install flask making sure all the dependencies are fulfiled
 
