@@ -12,12 +12,12 @@ def ussd():
 
     if text == "":
         response = "CON What would you like to check?\n"
-        response = "1. My Account\n"
-        response = "2. My phone number\n"
+        response += "1. My Account\n"
+        response += "2. My phone number\n"
     elif text == "1":
         response = "CON Choose a service that you require:\n"
-        response = "1. My account number\n"
-        response = "2. My account balance\n"
+        response += "1. My account number\n"
+        response += "2. My account balance\n"
     else:
         response = "END Invalid choice"
 
