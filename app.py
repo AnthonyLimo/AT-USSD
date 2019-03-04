@@ -1,10 +1,14 @@
+import os
 from flask import Flask, request
 
 app = Flask(__name__)
 
+response = ""
+
 @app.route('/', methods = ['GET','POST'])
 
 def ussd():
+    global response
     session_id = request.values.get("sessionId",None)
     servicecode =  request.values.get("serviceCode",None)
     phone_number = request.values.get("phoneNumber",None)
@@ -24,4 +28,4 @@ def ussd():
     return response
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0",post=os.environ.get("PORT"),debug=True)
